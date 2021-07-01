@@ -9,14 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinSample">
-        <!-- Activity 의 label 은 기본 제목으로 사용됩니다. -->
+        <activity
+            android:name=".ControlKotlinActivity"
+            android:label="ControlKotlin"
+            />
+        <activity
+            android:name=".ControlJavaActivity"
+            android:label="ControlJava"/>
+        <activity
+            android:name=".VariableKotlinActivity"
+            android:label="VariableKotlin" />
+        <activity
+            android:name=".VariableJavaActivity"
+            android:label="VariableJava" /> <!-- Activity 의 label 은 기본 제목으로 사용됩니다. -->
         <activity
             android:name=".BmiKotlinActivity"
-            android:label="BmiKotlinActivity"/>
-
+            android:label="BmiKotlinActivity" />
         <activity
             android:name=".BmiJavaActivity"
-            android:label="BmiJavaActivity"/>
+            android:label="BmiJavaActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
