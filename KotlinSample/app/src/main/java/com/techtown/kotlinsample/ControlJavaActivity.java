@@ -32,15 +32,18 @@ public class ControlJavaActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int number = Integer.parseInt(numberField.getText().toString());
                 if (number % 2 == 0) {
-                    Toast.makeText(getApplicationContext(), "" + number + " 는 2의 배수입니다.", Toast.LENGTH_SHORT).show();
+                    ToastUtilJava.toastShort("" + number + " 는 2의 배수입니다.");
                 } else if (number % 3 == 0) {
-                    Toast.makeText(getApplicationContext(), "" + number + " 는 3의 배수입니다.", Toast.LENGTH_SHORT).show();
+                    ToastUtilJava.toastShort("" + number + " 는 3의 배수입니다.");
                 } else {
-                    Toast.makeText(getApplicationContext(),"" + number, Toast.LENGTH_SHORT).show();
+                    ToastUtil.toastShort("" + number );
                 }
 
                 // switch 문으로 체크후 버튼의 텍스트를 변경한다.
                 switch (number) {
+                    case 1:
+                    case 2:
+                    case 3:
                     case 4:
                         button.setText("실행 - 4");
                         break;
@@ -53,5 +56,6 @@ public class ControlJavaActivity extends AppCompatActivity {
                 }
             }
         });
+
     }
 }

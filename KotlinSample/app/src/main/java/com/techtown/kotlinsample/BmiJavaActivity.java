@@ -2,6 +2,7 @@ package com.techtown.kotlinsample;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,6 +30,7 @@ public class BmiJavaActivity extends AppCompatActivity {
         //bmibutton 이 클릭된 경우의 이벤트 리스너를 등록한다.
         findViewById(R.id.bmiButton).setOnClickListener(new View.OnClickListener(){
 
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 //tailField 의 값을 읽어온다.

@@ -19,13 +19,13 @@ class ControlKotlinActivity : AppCompatActivity() {
 
             when {
                 number % 2 == 0 -> {
-                    Toast.makeText(applicationContext, "$number 는 2의 배수입니다.", Toast.LENGTH_SHORT).show()
+                    toastShort("$number 는 2의 배수입니다.")
                 }
                 number % 3 == 0 -> {
-                    Toast.makeText(applicationContext, "$number 는 3의 배수입니다.", Toast.LENGTH_SHORT).show()
+                    toastShort("$number 는 3의 배수입니다.")
                 }
                 else -> {
-                    Toast.makeText(applicationContext, "$number", Toast.LENGTH_SHORT).show()
+                    toastLong("$number")
                 }
             }
 
