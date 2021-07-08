@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lotto</string>
-    <string name="constellation_activity">CONSTELLATION ACTIVITY</string>
-    <string name="nameText">이름을 입력하세요</string>
+    <string name="app_name">ReversalLotto</string>
+    <string name="constellation_activity" translatable="false">CONSTELLATION ACTIVITY</string>
+    <string name="nameText" translatable="false">이름을 입력하세요</string>
 </resources>
