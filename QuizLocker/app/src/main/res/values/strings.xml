@@ -4,4 +4,10 @@
     <string name="textField_hint">아무 글씨나 입력 하세요</string>
     <string name="loadButton_text">불러오기</string>
     <string name="saveButton_text">저장</string>
+    <!-- 환경설정 창에서 퀴즈 종류로 사용할 문자열 배열    -->
+    <string-array name="category">
+        <item>일반상식</item>
+        <item>역사</item>
+        <item>수도</item>
+    </string-array>
 </resources>
