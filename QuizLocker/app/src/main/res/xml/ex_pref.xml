@@ -12,7 +12,7 @@
         android:singleLine="true"
         android:summary="사용자 이름을 설정하세요"
         android:title="이름" />
-    <SwitchPreference
+    <SwitchPreferenceCompat
         android:defaultValue="false"
         android:key="isPush"
         android:summary="여러가지 유용한 알림을 받아보세요"
