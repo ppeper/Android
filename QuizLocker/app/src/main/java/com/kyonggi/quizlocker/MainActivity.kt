@@ -1,5 +1,6 @@
 package com.kyonggi.quizlocker
 
+import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -7,14 +8,33 @@ import android.os.Bundle
 import androidx.preference.MultiSelectListPreference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
+import com.kyonggi.quizlocker.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    val fragment = MyPreferenceFragment()
+    private val fragment = MyPreferenceFragment()
+    val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
         // preferenceContent FrameLayout 영역을 PreferenceFragment 로 교체
         supportFragmentManager.beginTransaction().replace(R.id.preferenceContent, fragment).commit()
+
+        // 버튼이 클릭되면 초기화
+        binding.initButton.setOnClickListener {
+            initAnswerCount()
+        }
+
+    }
+
+    private fun initAnswerCount() {
+        // 정답, 오답횟수의 설정 정보를 가져온다.
+        val correctAnswerPref = getSharedPreferences("correctAnswer", Context.MODE_PRIVATE)
+        val wrongAnswerPref = getSharedPreferences("wrongAnswer", Context.MODE_PRIVATE)
+
+        // 초기화
+        correctAnswerPref.edit().clear().apply()
+        wrongAnswerPref.edit().clear().apply()
     }
 
     class MyPreferenceFragment : PreferenceFragmentCompat() {
