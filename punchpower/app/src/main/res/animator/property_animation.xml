@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 애니메이션을 순차적으로 진행 -->
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:ordering="sequentially">
+    <!-- y 축 이동 애니메이션 -->
+    <objectAnimator
+        android:duration="300"
+        android:propertyName="y"
+        android:repeatCount="1"
+        android:repeatMode="reverse"
+        android:valueFrom="700"
+        android:valueTo="400"
+        android:valueType="floatType"/>
+
+    <!-- x 축 이동 애니메이션 -->
+    <objectAnimator
+        android:duration="300"
+        android:propertyName="x"
+        android:repeatMode="reverse"
+        android:repeatCount="1"
+        android:valueType="floatType"
+        android:valueTo="800"
+        android:valueFrom="400"/>
+
+    <!-- 알파 애니메이션 -->
+    <objectAnimator
+        android:duration="300"
+        android:propertyName="alpha"
+        android:repeatCount="1"
+        android:repeatMode="reverse"
+        android:valueTo="0.2"
+        android:valueType="floatType"/>
+
+    <!-- rotate 애니메이션 -->
+    <objectAnimator
+        android:duration="300"
+        android:propertyName="rotation"
+        android:repeatMode="reverse"
+        android:repeatCount="1"
+        android:valueTo="360"
+        android:valueType="floatType"/>
+
+    <!-- set 내부에 중첩해서 사용가능 -->
+    <set android:ordering="together">
+        <objectAnimator
+            android:duration="300"
+            android:propertyName="scaleY"
+            android:repeatCount="1"
+            android:repeatMode="reverse"
+            android:valueTo="2.0"
+            android:valueType="floatType"/>
+
+        <objectAnimator
+            android:duration="300"
+            android:propertyName="scaleX"
+            android:repeatMode="reverse"
+            android:repeatCount="1"
+            android:valueTo="2.0"
+            android:valueType="floatType"/>
+    </set>
+</set>

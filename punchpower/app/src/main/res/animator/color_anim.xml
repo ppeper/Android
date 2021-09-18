@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator xmlns:andorid="http://schemas.android.com/apk/res/android"
+    andorid:duration="3000"
+    andorid:propertyName="backgroundColor"
+    andorid:valueFrom="@color/black"
+    andorid:valueTo="@color/white"
+    andorid:repeatCount="infinite"
+    andorid:repeatMode="reverse"
+    andorid:valueType="intType" />
